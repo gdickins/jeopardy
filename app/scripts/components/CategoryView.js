@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-const Category = React.createClass({
+let Category = React.createClass({
   getInitialState: function() {
     return {
       title: '',
@@ -12,11 +12,21 @@ const Category = React.createClass({
     $.ajax(`http://jservice.io/api/category?id=1`)
       .then((category) => {
         this.setState(category);
-        console.log(this.state.clues[0].question)
       })
   },
-  clickHandler: function(qNum) {
-    console.log(this.params);
+  clickHandler: function(evt) {
+    console.log(this.state);
+    if(evt.nativeEvent.target.className === 'v200') {
+      console.log(this.state.clues[0].question)
+    } else if(evt.nativeEvent.target.className === 'v400') {
+      console.log(this.state.clues[1].question)
+    }else if(evt.nativeEvent.target.className === 'v600') {
+      console.log(this.state.clues[2].question)
+    }else if(evt.nativeEvent.target.className === 'v800') {
+      console.log(this.state.clues[3].question)
+    }else if(evt.nativeEvent.target.className === 'v1000') {
+      console.log(this.state.clues[4].question)
+    };
   },
   render: function() {
     return (
