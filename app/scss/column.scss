@@ -1,0 +1,35 @@
+.column-container {
+  width: calc(100vw/6);
+  float: left;
+  text-align: center;
+  h3 {
+    font-size: 1.3rem;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
+    color: #e7c71a;
+
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #e7c71a;
+    li {
+      border: 2px solid black;
+      padding: 10% 0%;
+      margin: 5% 10%;
+      font-size: 2.4rem;
+      background: transparentize(#339999, .5);
+      list-style-type: none;
+        &:hover {
+        transition: .5s;
+        background: transparentize(#339999, .5);
+      }
+    }
+    .wasViewed {
+      color: #123456;
+      background: #123456;
+    }
+  }
+}
